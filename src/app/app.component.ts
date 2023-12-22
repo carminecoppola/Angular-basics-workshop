@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { PersonalInfoComponent } from './personal-info/personal-info.component';
+import { MyDashboardComponent } from './my-dashboard/my-dashboard.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [CommonModule, PersonalInfoComponent ,MyDashboardComponent],
+  template: `
+    
+    <app-personal-info></app-personal-info>
+    <app-my-dashboard></app-my-dashboard>
+  `,
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'prova';
