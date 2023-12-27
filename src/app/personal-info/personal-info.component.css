@@ -41,7 +41,25 @@
 
   .card-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh; /* Imposta l'altezza al 100% della viewport per centrare verticalmente */
+    margin-bottom: 20px; /* Aggiungi margine inferiore per separare le sezioni */
   }
+  
+  .example-card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .card-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .main-card {
+    margin: 20px;
+  }
+  

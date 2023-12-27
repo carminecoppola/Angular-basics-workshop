@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
-
+import { setInterval } from 'timers';
 
 @Component({
   selector: 'app-personal-info',
@@ -12,8 +12,10 @@ import {MatIconModule} from '@angular/material/icon';
   templateUrl: './personal-info.component.html',
   styleUrl: './personal-info.component.css'
 })
-export class PersonalInfoComponent implements OnInit, AfterContentChecked, AfterContentInit, 
-AfterViewChecked, AfterViewInit, DoCheck, OnDestroy{
+
+//, AfterContentChecked, AfterContentInit,AfterViewChecked, AfterViewInit, DoCheck, OnDestroy
+
+export class PersonalInfoComponent implements OnInit{
   
 /* 01)String Interpolation:
     Utilizzo una variabile per il nome della persona nella card e per il ruolo, 
@@ -36,39 +38,36 @@ AfterViewChecked, AfterViewInit, DoCheck, OnDestroy{
   ];
         
 
-  /* 02) Propety Binding:
-
+  /*02) Propety Binding:
+    è una tecnica che consente di collegare dinamicamente il valore di una proprietà HTML 
+    a una variabile nel componente TypeScript. Nel tuo esempio, isDisabled potrebbe essere
+    utilizzato per controllare lo stato di disabilitazione di un elemento nell'interfaccia
+    utente.
   */
 
-  isDisabled = true
+    //isDisabled = false
 
-  constructor(){
-    console.log("Constructor")
+  ngOnInit(): void {
+    console.log("ngOnInit");
   }
   
-  ngOnInit(): void {
-    console.log("ngOnInit")
-    setInterval(() =>{
-      this.isDisabled
-    }, 2000)
-  }
-  ngAfterContentChecked(): void {
-    console.log("ngAfterContentChecked")
-  }
-  ngAfterContentInit(): void {
-    console.log('ngAfterContentInit');
-  }
-  ngAfterViewChecked(): void {
-    console.log('ngAfterViewChecked');
-  }
-  ngAfterViewInit(): void {
-    console.log('ngAfterViewInit');
-  }
-  ngDoCheck(): void {
-    console.log('ngDoCheck');
-  }
-  ngOnDestroy(): void {
-    console.log('ngOnDestroy');
-  }
+  // ngAfterContentChecked(): void {
+  //   console.log("ngAfterContentChecked")
+  // }
+  // ngAfterContentInit(): void {
+  //   console.log('ngAfterContentInit');
+  // }
+  // ngAfterViewChecked(): void {
+  //   console.log('ngAfterViewChecked');
+  // }
+  // ngAfterViewInit(): void {
+  //   console.log('ngAfterViewInit');
+  // }
+  // ngDoCheck(): void {
+  //   console.log('ngDoCheck');
+  // }
+  // ngOnDestroy(): void {
+  //   console.log('ngOnDestroy');
+  // }
 
 }

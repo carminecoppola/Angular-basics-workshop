@@ -1,0 +1,47 @@
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
+
+.example-disabled {
+  display: inline-block;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+
+/* Aggiungi stili specifici alla tua card */
+mat-card {
+  width: 300px; /* Specifica una larghezza desiderata */
+  margin: 20px; /* Aggiungi margini per spaziatura */
+  padding: 15px; /* Aggiungi spaziatura interna */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiungi un'ombra leggera */
+}
+
+/* Personalizza ulteriormente a tuo piacimento */
+mat-card-title {
+  color: #333;
+  font-size: 18px;
+}
+
+mat-card-subtitle {
+  color: #666;
+  font-size: 14px;
+}
+
+mat-card-content {
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
