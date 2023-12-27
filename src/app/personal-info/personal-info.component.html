@@ -1,28 +1,29 @@
 <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Carmine Coppola</mat-card-title>
-      <mat-card-subtitle>Web developer</mat-card-subtitle>
+      <mat-card-title>{{persone[0].name}} {{persone[0].surname}}</mat-card-title>
+      <mat-card-subtitle>{{persone[0].role}}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="https://images.unsplash.com/photo-1484807352052-23338990c6c6?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Photo of a Shiba Inu">
     <mat-card-content>
-      <p>
-        View and manage all the information related to yourself. 
-        Edit your Personal Avatar, Email and Password, and Personal Details.
-      </p>
+      <p style="color: slategray; font-size: medium;"> {{persone[0].description}} </p>
     </mat-card-content>
     <mat-card-actions>
       <section>
         <div class="example-button-row">
           <div class="example-flex-container">
             <div class="example-button-container">
-              <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+              <button mat-fab color="primary">
                 <mat-icon>edit</mat-icon>
               </button>
             </div>
             <div class="example-button-container">
-              <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+              <button mat-fab color="warn">
                 <mat-icon>add</mat-icon>
+              </button>
+            </div>
+            <div class="example-button-container">
+              <button mat-fab [disabled]="isDisabled" color="accent">
+                <mat-icon>cancel</mat-icon>
               </button>
             </div>
           </div>
@@ -31,3 +32,36 @@
     </mat-card-actions>
   </mat-card>
   
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image" style="background-image: url(https://avatars.githubusercontent.com/u/113611335?v=4);"></div>
+      <mat-card-title>{{persone[1].name}} {{persone[1].surname}}</mat-card-title>
+      <mat-card-subtitle>{{persone[1].role}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p style="color: slategray; font-size: medium;"> {{persone[1].description}} </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <section>
+        <div class="example-button-row">
+          <div class="example-flex-container">
+            <div class="example-button-container">
+              <button mat-fab color="primary">
+                <mat-icon>edit</mat-icon>
+              </button>
+            </div>
+            <div class="example-button-container">
+              <button mat-fab color="warn">
+                <mat-icon>add</mat-icon>
+              </button>
+            </div>
+            <div class="example-button-container">
+              <button mat-fab [disabled]="isDisabled" color="accent">
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </mat-card-actions>
+  </mat-card>
