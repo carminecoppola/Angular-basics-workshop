@@ -6,7 +6,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, NgModel } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
-import { NgIf } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
+import { MatListModule } from '@angular/material/list';
 
 @Component({
   selector: 'app-my-dashboard',
@@ -19,7 +20,9 @@ import { NgIf } from '@angular/common';
     MatInputModule,
     FormsModule,
     MatCardModule,
+    MatListModule,
     NgIf,
+    NgFor,
   ],
   templateUrl: './my-dashboard.component.html',
   styleUrls: ['./my-dashboard.component.css'],
@@ -78,4 +81,14 @@ export class MyDashboardComponent {
     this.username = (<HTMLInputElement>event.target).value;
     this.isVisible = this.username.length > 4;
   }
+
+
+  /* - NgFOR */
+  persone = [
+    {name: 'Carmine', surname:'Coppola',age:'22',citylives:'Pomigliano',isOnline: true},
+    {name: 'Camilla', surname:'De Martino',age:'22',citylives:'San Giorgio a Cremano',isOnline: true},
+    {name: 'Attilio', surname:'Di Vicino',age:'25',citylives:'Pianura',isOnline: false},
+    {name: 'Vincenzo', surname:'Bucciero',age:'22',citylives:'Pomigliano',isOnline: false},
+    {name: 'Mario', surname:'Vista',age:'21',citylives:'Giugliano',isOnline: true},
+  ]
 }
