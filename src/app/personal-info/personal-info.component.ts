@@ -1,14 +1,18 @@
 import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { setInterval } from 'timers';
 
 @Component({
   selector: 'app-personal-info',
   standalone: true,
-  imports: [MatCardModule,MatButtonModule,MatIconModule],
+  imports: [
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule
+  ],
   templateUrl: './personal-info.component.html',
   styleUrl: './personal-info.component.css'
 })

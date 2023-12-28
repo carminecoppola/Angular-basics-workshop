@@ -1,18 +1,49 @@
+<!-- Card Two-wayBinding -->
 <mat-card>
     <mat-card-header>
-      <mat-card-title>Sezione Interattiva <br> ({{title}})</mat-card-title>
+      <mat-card-title>Event Binding & Two-Way Binding</mat-card-title>
       <mat-card-subtitle>Interagisci con gli event binding e il two-way binding per cambiare il titolo della card</mat-card-subtitle>
     </mat-card-header>
   
     <mat-card-content>
-      <button mat-raised-button style="background-color: green; color: white;" (click)="onClick($event)">Applica <br> two-way binding</button>
+      <h4>- Nome Corso: <strong>{{title}}</strong></h4>
       <form class="example-form" #myForm="ngForm">
         <mat-form-field class="example-full-width">
           <mat-label>Nome Corso</mat-label>
           <input matInput placeholder="Esempio: Corso Angular" name="title" [(ngModel)]="title" />
         </mat-form-field>
       </form>
-      <p>Titolo: {{title}}</p>
+      <p> Per applicare il two-way binding
+        <button mat-raised-button color="primary" (click)="onClick($event)">Clicca qui</button>
+      </p>
     </mat-card-content>
   </mat-card>
+
+<!-- Card NgIF -->
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Elementi condizionali <br> con NgIF</mat-card-title>
+    <mat-card-subtitle>
+      In questa card, puoi provare un interfaccia utente interattiva che utilizza
+      la direttiva Angular *NgIF per rendere dinamico il rendering degli elementi 
+      in base a condizioni specifiche.
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <mat-form-field appearance="fill">
+      <mat-label>Username</mat-label>
+      <input matInput (input)="formInput($event)">
+      <mat-icon matSuffix *ngIf="isVisible" style="color: green;">sentiment_very_satisfied</mat-icon>
+      <mat-icon matSuffix *ngIf="!isVisible" style="color: red;">sentiment_very_dissatisfied</mat-icon>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button style="background-color: green; color: white;" *ngIf="isVisible; else bloccoElse ">Completed</button>
+    <ng-template #bloccoElse>
+      <p>The length of the username must be greater than 4 characters</p>
+      <button mat-raised-button *ngIf="!isVisible" disabled>Not completed</button>
+    </ng-template>
+  </mat-card-content>
+</mat-card>
+
   

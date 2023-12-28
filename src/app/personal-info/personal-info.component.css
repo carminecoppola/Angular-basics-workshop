@@ -54,6 +54,7 @@
 
   .card-wrapper {
     display: flex;
+    box-shadow: 0 4px 5px rgba(246, 246, 246, 0.684); /* Aggiunge un po' di rilievo */
     flex-direction: row;
     justify-content: space-between;
     align-items: center;

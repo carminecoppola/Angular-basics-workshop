@@ -6,6 +6,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, NgModel } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-my-dashboard',
@@ -18,13 +19,13 @@ import { MatCardModule } from '@angular/material/card';
     MatInputModule,
     FormsModule,
     MatCardModule,
+    NgIf,
   ],
   templateUrl: './my-dashboard.component.html',
   styleUrls: ['./my-dashboard.component.css'],
 })
 export class MyDashboardComponent {
-
-  title = 'corso-angular'
+  title = 'corso-angular';
 
   /* 3)Event Binding:
       è un meccanismo in Angular che permette di associare un'azione (come una funzione o un metodo) 
@@ -34,7 +35,8 @@ export class MyDashboardComponent {
       si verifica l'evento. Questa funzione viene poi associata all'evento nell'HTML utilizzando 
       la sintassi:  (nomeEvento)="funzioneDaEseguire($event)"
   */
-  onInput(event: Event) { // Puoi fare anche senza cast e quindi passare any
+  onInput(event: Event) {
+    // Puoi fare anche senza cast e quindi passare any
     console.log((<HTMLInputElement>event.target).value);
   }
 
@@ -51,12 +53,29 @@ export class MyDashboardComponent {
         simultaneamente.
   */
 
-  
-  onInput2(event: Event) { // Puoi fare anche senza cast e quindi passare any
-   this.title = ((<HTMLInputElement>event.target).value)
+  onInput2(event: Event) {
+    // Puoi fare anche senza cast e quindi passare any
+    this.title = (<HTMLInputElement>event.target).value;
   }
 
-  onClick(event: any) { // Puoi fare anche senza cast e quindi passare any
-    this.title = 'Ho cliccato il bottone per il cambio titolo'
+  onClick(event: any) {
+    // Puoi fare anche senza cast e quindi passare any
+    this.title = 'Ho cliccato il bottone per il cambio titolo';
+  }
+
+  /* - Elementi Condizionali con NgIF 
+      In generale, con l'utilizzo di *ngIf è stato implementata la logica di rendering condizionale
+      per gestire dinamicamente la visibilità degli elementi in base a una condizione specifica
+      nel componente Angular.
+      In questo caso, utilizziamo *ngIf per controllare la visibilità di diversi elementi in 
+      base alla lunghezza dell'username inserito nel campo di input.
+  */
+
+  username = '';
+  isVisible = false;
+
+  formInput(event: Event) {
+    this.username = (<HTMLInputElement>event.target).value;
+    this.isVisible = this.username.length > 4;
   }
 }

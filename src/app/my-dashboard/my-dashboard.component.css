@@ -20,7 +20,7 @@
 
 /* Aggiungi stili specifici alla tua card */
 mat-card {
-  width: 300px; /* Specifica una larghezza desiderata */
+  width: 500px; /* Specifica una larghezza desiderata */
   margin: 20px; /* Aggiungi margini per spaziatura */
   padding: 15px; /* Aggiungi spaziatura interna */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiungi un'ombra leggera */
@@ -38,7 +38,7 @@ mat-card-subtitle {
 }
 
 mat-card-content {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 button {
