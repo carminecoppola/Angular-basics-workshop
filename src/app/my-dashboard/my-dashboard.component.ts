@@ -6,7 +6,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, NgModel } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor, NgIf, NgSwitch, NgStyle } from '@angular/common';
 import { MatListModule } from '@angular/material/list';
 
 @Component({
@@ -21,8 +21,8 @@ import { MatListModule } from '@angular/material/list';
     FormsModule,
     MatCardModule,
     MatListModule,
-    NgIf,
-    NgFor,
+    NgIf,NgFor,NgSwitch,NgStyle,
+
   ],
   templateUrl: './my-dashboard.component.html',
   styleUrls: ['./my-dashboard.component.css'],
@@ -85,10 +85,10 @@ export class MyDashboardComponent {
 
   /* - NgFOR */
   persone = [
-    {name: 'Carmine', surname:'Coppola',age:'22',citylives:'Pomigliano',isOnline: true},
-    {name: 'Camilla', surname:'De Martino',age:'22',citylives:'San Giorgio a Cremano',isOnline: true},
-    {name: 'Attilio', surname:'Di Vicino',age:'25',citylives:'Pianura',isOnline: false},
-    {name: 'Vincenzo', surname:'Bucciero',age:'22',citylives:'Pomigliano',isOnline: false},
-    {name: 'Mario', surname:'Vista',age:'21',citylives:'Giugliano',isOnline: true},
+    {name: 'Carmine', surname:'Coppola',age:'22',citylives:'Pomigliano',isOnline: true,sex:'M'},
+    {name: 'Camilla', surname:'De Martino',age:'22',citylives:'San Giorgio a Cremano',isOnline: true,sex:'F'},
+    {name: 'Attilio', surname:'Di Vicino',age:'25',citylives:'Pianura',isOnline: false,sex:'M'},
+    {name: 'Vincenzo', surname:'Bucciero',age:'22',citylives:'Pomigliano',isOnline: false,sex:'M'},
+    {name: 'Mario', surname:'Vista',age:'21',citylives:'Giugliano',isOnline: true,sex:'M'},
   ]
 }
