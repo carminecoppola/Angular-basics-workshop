@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { MyDashboardComponent } from './my-dashboard/my-dashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 /*
   - Importiamo i componenti personalizzati definiti in altri file.
@@ -19,13 +20,22 @@ import { NavbarComponent } from './navbar/navbar.component';
     CommonModule, 
     PersonalInfoComponent,
     MyDashboardComponent, 
-    NavbarComponent
+    NavbarComponent,
+    MatTabsModule
   ],
   template: `
-    
     <app-navbar></app-navbar>
-    <app-personal-info></app-personal-info>
-    <app-my-dashboard></app-my-dashboard>
+      <mat-tab-group animationDuration="1500ms">
+        <mat-tab label="My Dashboard"> 
+          <app-my-dashboard></app-my-dashboard>
+        </mat-tab>
+      <mat-tab label="Personal">
+          <app-personal-info></app-personal-info>
+      </mat-tab>
+        <mat-tab label="Other">  
+
+        </mat-tab>
+      </mat-tab-group>
   `,
   styleUrls: ['./app.component.css']
 })

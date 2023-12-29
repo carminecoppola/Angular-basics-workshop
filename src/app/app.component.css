@@ -1,0 +1,26 @@
+/* Qui puoi modificare i colori della Tabulazione*/
+
+.mat-mdc-tab-group, .mat-mdc-tab-nav-bar{
+    --mat-tab-header-active-focus-label-text-color: #ffffff;
+    --mat-tab-header-active-label-text-color : #ffffff;
+    --mat-tab-header-inactive-label-text-color: rgba(255, 255, 255, 0.6);
+    --mat-tab-header-inactive-focus-label-text-color: rgba(255, 255, 255, 0.6);
+    --mat-tab-header-inactive-hover-label-text-color : rgba(255, 255, 255, 0.6);
+    --mdc-tab-indicator-active-indicator-color: #ffffff;
+    --mat-tab-header-active-hover-label-text-color: #ffffff;
+    --mat-tab-header-active-ripple-color: #acb6c14b;
+    --mat-tab-header-inactive-ripple-color: #ffffff;
+    --mat-tab-header-active-focus-indicator-color: #eff3f3a4;
+    --mat-tab-header-active-hover-indicator-color: #eff3f3a4;
+} 
+::ng-deep .mat-tab-body-wrapper{
+    min-height: 550px
+}
+
+::ng-deep .mat-tab-label-container {
+    flex-grow: 0 !important;
+}
+
+::ng-deep .mat-tab-label{
+    opacity: 1 !important;
+}
