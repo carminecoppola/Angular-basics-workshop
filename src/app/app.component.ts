@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { MyDashboardComponent } from './my-dashboard/my-dashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
+import { FooterComponent } from './footer/footer.component';
 
 /*
   - Importiamo i componenti personalizzati definiti in altri file.
@@ -18,10 +19,11 @@ import {MatTabsModule} from '@angular/material/tabs';
   standalone: true,
   imports: [
     CommonModule, 
+    NavbarComponent,
+    FooterComponent,
+    MatTabsModule,
     PersonalInfoComponent,
     MyDashboardComponent, 
-    NavbarComponent,
-    MatTabsModule
   ],
   template: `
     <app-navbar></app-navbar>
@@ -33,9 +35,12 @@ import {MatTabsModule} from '@angular/material/tabs';
           <app-personal-info></app-personal-info>
       </mat-tab>
         <mat-tab label="Other">  
-
-        </mat-tab>
+      </mat-tab>
       </mat-tab-group>
+
+    <app-footer></app-footer>
+
+
   `,
   styleUrls: ['./app.component.css']
 })

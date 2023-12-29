@@ -2,6 +2,7 @@
   background-color: #acb6c1;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1); /* Aggiunge un po' di rilievo */
   color: white; /* Testo bianco */
+  position:relative;
 }
 
 .example-spacer {

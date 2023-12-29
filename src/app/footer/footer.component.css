@@ -1,0 +1,40 @@
+/* Altri stili della tua app */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+main {
+    margin-bottom: 80px; /* Altezza del footer + spazio aggiuntivo */
+    padding: 20px;
+}
+  
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+footer {
+  background-color: #7b8085;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: static;
+  bottom: 0;
+  width: 100%;
+}
+  
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Stili per il testo del footer */
+footer p {
+  margin: 0;
+}
