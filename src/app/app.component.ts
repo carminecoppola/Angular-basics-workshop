@@ -45,5 +45,5 @@ import { FooterComponent } from './footer/footer.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'prova';
+  title = 'My App';
 }
