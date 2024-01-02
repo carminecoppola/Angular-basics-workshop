@@ -23,7 +23,7 @@ import { FooterComponent } from './footer/footer.component';
     FooterComponent,
     MatTabsModule,
     PersonalInfoComponent,
-    MyDashboardComponent, 
+    MyDashboardComponent,
   ],
   template: `
     <app-navbar></app-navbar>
@@ -34,7 +34,7 @@ import { FooterComponent } from './footer/footer.component';
       <mat-tab label="Personal">
           <app-personal-info></app-personal-info>
       </mat-tab>
-        <mat-tab label="Other">  
+        <mat-tab label="Other"> 
       </mat-tab>
       </mat-tab-group>
 
