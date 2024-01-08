@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, OnInit, SimpleChanges,} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild,} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -6,21 +6,15 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [
     CommonModule, 
-    ProvaComponent
+    ProvaComponent,
   ],
   templateUrl: './prova.component.html',
   styleUrls: ['./prova.component.css'],
 })
-export class ProvaComponent implements OnInit, OnChanges {
-  @Input() data: any;
-
-  constructor() {}
-
+export class ProvaComponent implements OnInit{
+  
   ngOnInit(): void {
-    console.log(this.data);
-  }
+    console.log('ngOnInit')
 
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes);
   }
 }
