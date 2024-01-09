@@ -1,0 +1,17 @@
+
+<h2>
+    Scegli il colore
+    <div>
+        <input type="radio" name="coloreEvidenziatore" (click)="cambiaColoreEvidenziatore('red')"> Rosso
+        <input type="radio" name="coloreEvidenziatore" (click)="cambiaColoreEvidenziatore('yellow')"> Giallo
+        <input type="radio" name="coloreEvidenziatore" (click)="cambiaColoreEvidenziatore('blue')"> Blu
+    </div>
+</h2>
+
+<p [appHighlight]="colore" defaultColor="black">Ciao sono un paragrafo con una direttiva</p>
+
+<p [appHighlight]="colore" defaultColor="yellow">Ciao sono un paragrafo con una direttiva</p>
+
+<p [appHighlight]="colore" defaultColor="red">Ciao sono un paragrafo con una direttiva</p>
+
+
